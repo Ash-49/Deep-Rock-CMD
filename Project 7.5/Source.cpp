@@ -2,6 +2,11 @@
 //Nov 1
 //Deep rock Text based adventure
 
+//Yes this is horribly written, but it runs
+
+//Bugs:
+//-Entering a letter instead of number leads to reapted messages
+
 
 //Notes/to be done, nov 24:
 //end room
@@ -1249,7 +1254,45 @@ gmove:
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
 						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
 				}
-
+	case 908: switch (enemycount)
+				{
+				case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+						XS6 = 'X',	XS7 = 'X',			 XS9 = 'X', XS10 = 'X',
+						XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+					break;
+				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+						XS6 = 'G', XS7 = 'G',			XS9 = 'X', XS10 = 'X',
+						XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+					break;
+				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+						XS6 = 'X', XS7 = 'G',			XS9 = 'G', XS10 = 'X',
+						XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+					break;
+				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+						XS6 = 'X', XS7 = 'G',			XS9 = 'G', XS10 = 'X',
+						XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+					break;
+				case 5: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS4 = 'X', XS5 = 'X',
+						XS6 = 'X', XS7 = 'G',			XS9 = 'G', XS10 = 'X',
+						XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+					break;
+				case 6: XS1 = 'X', XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X',
+						XS6 = 'X', XS7 = 'G',			XS9 = 'G', XS10 = 'X',
+						XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+					break;
+				}
 
 
 
@@ -1376,48 +1419,114 @@ gmove:
 						XS16 = 'X', XS17 = 'G', XS18 = 'G', XS19 = 'G', XS20 = 'X',
 						XS21 = 'X', XS22 = 'G',				 XS24 = 'G', XS25 = 'X'; // pos 23 6g
 					break;
-			}
+				}
 	case 224: switch (enemycount)
 			{
 			case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-					XS21 = 'X', XS22 = 'X', XS23 = 'X', XS25 = 'G'; // pos 24 1g
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',				XS25 = 'G'; // pos 24 1g
 				break;
 			case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS25 = 'G'; // pos 24 2g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 2g
 				break;
 			case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS25 = 'G'; // pos 24 3g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 3g
 				break;
 			case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS25 = 'G'; // pos 24 4g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 4g
 				break;
 			case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS25 = 'G'; // pos 24 5g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 5g
 				break;
-
-		}
-
-			//display map
-
-
-
+			case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
+					XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'G', XS20 = 'G',
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 6g
+				break;
+				}
+	case 225: switch (enemycount)
+			{
+			case 1: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';				// pos 25 1g
+				break;
+			case 2: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';				//pos 25 2g
+				break;
+			case 3: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';				//pos 25 3g 
+				break;
+			case 4: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
+					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';				//pos 25 4g
+				break;
+			case 5: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
+					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
+					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G';				//pos 25 5g
+				break;
+			case 6: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
+					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
+					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G';				//pos 25 6g
+				break;
+			}
 	}
+	//display map after G move
+	cout << "#####################################" << '\n';
+	cout << "# A       B       C       D       E #" << '\n';
+	cout << "#1" << XS1 << "       " << XS2 << "       " << XS3 << "       " << XS4 << "       " << XS5 << " #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#2" << XS6 << "       " << XS7 << "       " << XS8 << "       " << XS9 << "       " << XS10 << " #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#3" << XS11 << "       " << XS12 << "       " << XS13 << "       " << XS14 << "       " << XS15 << " #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#4" << XS16 << "       " << XS17 << "       " << XS18 << "       " << XS19 << "       " << XS20 << " #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#5" << XS21 << "       " << XS22 << "       " << XS23 << "       " << XS24 << "       " << XS25 << " #" << '\n';
+	cout << "#                                   #" << '\n';
+	cout << "#####################################" << '\n' << '\n';
+	
 
+	//player health = playerhealth - damage*enemycount
+	
+
+	
 	//---------------------------------------------------------------------------------------------------------------------
 		//find which find location to go to
 findfindlocation:
