@@ -1287,14 +1287,480 @@ gmove:
 						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
 					break;
 				case 6: XS1 = 'X', XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X',
-						XS6 = 'X', XS7 = 'G',			XS9 = 'G', XS10 = 'X',
-						XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
-						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+					XS6 = 'X', XS7 = 'G', XS9 = 'G', XS10 = 'X',
+					XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+					XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
 					break;
 				}
-
-
+	case 909: switch (enemycount)//unformated, I aint spending the next hour tabbing this so its uniform
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS4 = 'G', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 910: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'G',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'G',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'G',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'G',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 911: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'G', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 912: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X',
+		XS11 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X',
+		XS11 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 913: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 914: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 915: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'G',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 916: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'G', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'G', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'G', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'G', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 917: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X';
+		break;
+	}
+	case 918: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS19 = 'X', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'X', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'G', XS19 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G', XS25 = 'X';
+		break;
+	}
+	case 919: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'X',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'G', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X';
+		break;
+	}
+	case 920: switch (enemycount)
+	{
+	case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		break;
+	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'G';
+		break;
+	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'G';
+		break;
+	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'G';
+		break;
+	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G',
+		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
+		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'G';
+		break;
+	}
 
 			//8-20 here
 
