@@ -46,11 +46,22 @@ void main()
 	//misc/I didnt feel like finding the correct category
 	string swarmmove;
 	string swarmattack;
-	int validinput = 0, damage = 0, prelocation1, prelocation2, prelocation3, prelocation4, prelocation5, prelocation6;
+	int validinput = 0, damage = 0;
 	//combat: health = player health, gxh = enemy health, gxl = enemy location
 	int health = 100, enemycount = 0, g1h = 25, g2h = 25, g3h = 25, g4h = 25, g5h = 25, g6h = 25, g7h = 25, g8h = 25, g9h = 25, g10h = 25, g11h = 25, g12h = 25, g13h = 25, gcheck = 0, g1l = 0, g2l = 0, g3l = 0, g4l = 0, g5l = 0, g6l = 0, g7l = 0, g8l = 0, g9l = 0, g10l = 0, g11l = 0, g12l = 0, g13l = 0;
 	//---------------------------------------------------------------------------------------------------------------------
+	cout << "========================================================================================" << '\n' << '\n'
 
+
+	cout << "______                 ______           _      _____       _            _   _      " << '\n';
+	cout << "|  _  \\                | ___ \\         | |    |  __ \\     | |          | | (_)     " << '\n';
+	cout << "| | | |___  ___ _ __   | |_/ /___   ___| | __ | |  \\/ __ _| | __ _  ___| |_ _  ___ " << '\n';
+	cout << "| | | / _ \\/ _ \\ '_ \\  |    // _ \\ / __| |/ / | | __ / _` | |/ _` |/ __| __| |/ __|" << '\n';
+	cout << "| |/ /  __/  __/ |_) | | |\\ \\ (_) | (__|   <  | |_\\ \\ (_| | | (_| | (__| |_| | (__ " << '\n';
+	cout << "|___/ \\___|\\___| .__/  \\_| \\_\\___/ \\___|_|\\_\\  \\____/\\__,_|_|\\__,_|\\___|\\__|_|\\___|" << '\n';
+	cout << "               | |                                                                 " << '\n';
+	cout << "               |_|                                                                 " << '\n';
+	cout << "========================================================================================" << '\n' << '\n'
 
 	//display controls
 	cout << "These are your controls" << '\n' << "1) North ^" << '\n' << "2) West <" << '\n' << "3) South v" << '\n' << "4) East >" << '\n' << "5) Inventory" << '\n' << "6) Mine" << '\n' <<'\n'<< "8) Help" << '\n' << '\n';
@@ -668,11 +679,11 @@ attack:
 	getline(cin, swarmattack);
 	validinput = 0;
 	srand((unsigned)time(0));
-	damage = (rand() % 20) + 5;
+	damage = (rand() % 25) + 5;
 
 	if (swarmattack == "A1")//is it [cordinate]
 	{
-		if (XS1 == 'G')//is it an ememy
+		if (XS1 == 'G')//is it an enemy
 		{
 			switch (enemycount)
 			{
@@ -684,7 +695,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;//go back to reinput
+		else cout << "No enemy here." << '\n'; goto attack;//go back to reinput
 	}//continue until input is found
 
 	if (swarmattack == "B1")
@@ -701,7 +712,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "C1")
@@ -718,7 +729,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "D1")
@@ -735,7 +746,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "E1")
@@ -752,7 +763,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "A2")
@@ -769,7 +780,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "B2")
@@ -786,7 +797,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "C2")
@@ -803,7 +814,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "D2")
@@ -820,7 +831,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "E2")
@@ -837,7 +848,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "A3")
@@ -854,7 +865,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "B3")
@@ -871,7 +882,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "C3")
@@ -888,7 +899,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "D3")
@@ -905,7 +916,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "E3")
@@ -922,7 +933,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "A4")
@@ -939,7 +950,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "B4")
@@ -956,7 +967,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "C4")
@@ -973,7 +984,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "D4")
@@ -990,7 +1001,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "E4")
@@ -1007,7 +1018,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "A5")
@@ -1024,7 +1035,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "B5")
@@ -1041,7 +1052,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "C5")
@@ -1058,7 +1069,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "D5")
@@ -1075,7 +1086,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) { enemycount--; } goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 	if (swarmattack == "E5")
@@ -1092,7 +1103,7 @@ attack:
 			case 6:g6h = g6h - damage; cout << "You dealt " << damage << "damage" << '\n'; if (g6h < 1) {enemycount--;} goto gmove;
 			}
 		}
-		else cout << "No ememy here." << '\n'; goto attack;
+		else cout << "No enemy here." << '\n'; goto attack;
 	}
 
 
@@ -1762,11 +1773,6 @@ gmove:
 		break;
 	}
 
-			//8-20 here
-
-
-
-
 	case 921: switch (enemycount)
 				{
 				case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
@@ -1988,11 +1994,14 @@ gmove:
 	cout << "#                                   #" << '\n';
 	cout << "#####################################" << '\n' << '\n';
 	
-
+	//G deal damage
 	//player health = playerhealth - damage*enemycount
-	
-
-	
+	srand((unsigned)time(0));
+	damage = (rand() % 10) + 1;
+	health = health - damage * enemycount;
+	cout << "The glyphids dealt " << damage * enemycount << " damage to you (" << damage << " * " << enemycount << ")" << '\n' << "Health is " << health << "/100" << '\n';
+	if (health < 1) { goto death; }
+	goto findlocationswarm;
 	//---------------------------------------------------------------------------------------------------------------------
 		//find which find location to go to
 findfindlocation:
@@ -2323,7 +2332,7 @@ findmap:
 		cout << "#                           \\      \\#" << '\n';
 		cout << "#####################################" << '\n' << '\n';
 		goto findfindlocation;
-	}
+		}
 	
 	}
 swarmmap2:
@@ -2350,7 +2359,21 @@ swarmmap2:
 	cout << "#####################################" << '\n' << '\n';
 	goto attack;
 
+death:
+	cout << "========================================================================================" << '\n' << '\n'
 
+
+	cout << "___  ____         _              ______    _ _          _ "<<'\n';
+	cout << "|  \\/  (_)       (_)             |  ___|  (_) |        | |" << '\n';
+	cout << "| .  . |_ ___ ___ _  ___  _ __   | |_ __ _ _| | ___  __| |" << '\n';
+	cout << "| |\\/| | / __/ __| |/ _ \\| '_ \\  |  _/ _` | | |/ _ \\/ _` |" << '\n';
+	cout << "| |  | | \\__ \\__ \\ | (_) | | | | | || (_| | | |  __/ (_| |" << '\n';
+	cout << "\\_|  |_/_|___/___/_|\\___/|_| |_| \\_| \\__,_|_|_|\\___|\\__,_|" << '\n' << '\n';
+
+
+	cout << "========================================================================================" << '\n' << '\n'
+
+endprogram:
 	cin.get();  //keep console window open
 	cin.ignore();
 }
