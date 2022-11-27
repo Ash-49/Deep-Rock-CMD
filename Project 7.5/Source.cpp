@@ -9,7 +9,8 @@
 
 
 //Notes/to be done, nov 26:
-//end room
+//end sequance/after final fight display drop pod, show victory screen https://www.texttool.com/ascii-font#p=display&f=Doom&t=Success%20
+//bug: player not showing up during combat and enemies seemingly moving to wrong location
 
 #include <iostream>
 #include <cstdlib>
@@ -48,11 +49,11 @@ void main()
 	int health = 100, enemycount = 0, g1h = 25, g2h = 25, g3h = 25, g4h = 25, g5h = 25, g6h = 25, g7h = 25, g8h = 25, g9h = 25, g10h = 25, g11h = 25, g12h = 25, g13h = 25, gcheck = 0, g1l = 0, g2l = 0, g3l = 0, g4l = 0, g5l = 0, g6l = 0, g7l = 0, g8l = 0, g9l = 0, g10l = 0, g11l = 0, g12l = 0, g13l = 0;
 	
 	//map 3/ending
-	char X301 = 'X', X302 = 'X', X303 = 'X', X304 = 'X', X305 = 'X', X306 = 'X', X306 = 'X', X307 = 'X', X308 = 'X', X309 = 'X', X310 = 'X', X311 = 'X', G3 = 'G', H1 = 'H';
+	char X301 = 'X', X302 = 'X', X303 = 'X', X304 = 'X', X305 = 'X', X306 = 'X', X307 = 'X', X308 = 'X', X309 = 'X', X310 = 'X', X311 = 'X', G3 = 'G', H1 = 'H';
 	
 	
 	//---------------------------------------------------------------------------------------------------------------------
-	cout << "========================================================================================" << '\n' << '\n'
+	cout << "========================================================================================" << '\n' << '\n';
 
 
 	cout << "______                 ______           _      _____       _            _   _      " << '\n';
@@ -63,10 +64,10 @@ void main()
 	cout << "|___/ \\___|\\___| .__/  \\_| \\_\\___/ \\___|_|\\_\\  \\____/\\__,_|_|\\__,_|\\___|\\__|_|\\___|" << '\n';
 	cout << "               | |                                                                 " << '\n';
 	cout << "               |_|                                                                 " << '\n';
-	cout << "========================================================================================" << '\n' << '\n'
+	cout << "========================================================================================" << '\n' << '\n';
 
 	//display controls
-	cout << "These are your controls" << '\n' << "1) North ^" << '\n' << "2) West <" << '\n' << "3) South v" << '\n' << "4) East >" << '\n' << "5) Inventory" << '\n' << "6) Mine" << '\n' <<'\n'<< "8) Help" << '\n' << '\n';
+	cout << "These are your controls" << '\n' << "1) North ^" << '\n' << "2) West <" << '\n' << "3) South v" << '\n' << "4) East >" << '\n' << "5) Inventory" << '\n' << "6) Mine" << '\n'; cout << "8) Help" << '\n' << '\n';
 
 	//first map
 	cout << "#####################################" << '\n';
@@ -92,7 +93,7 @@ void main()
 	cout << "#####################################" << '\n' << '\n';
 
 	//legend
-	cout << "Legend: " << '\n' << "D = Dwarf/Yourelf" << '\n' << "x = Place you can move to" << '\n' << "C = Collasped dirt" << '\n' << "N = Nitra" << '\n' << "G = Gold" << '\n' << "g = Glyphid" << '\n';
+	cout << "Legend: " << '\n' << "D = Dwarf/Yourelf" << '\n' << "x = Place you can move to" << '\n' << "C = Collasped dirt" << '\n' << "N = Nitra" << '\n' << "G = Gold" << '\n'<<"H = Red Suger" <<'\n' << "g = Glyphid" << '\n';
 
 	
 
@@ -236,8 +237,8 @@ inventory:
 
 		//display controls/help
 help:
-	cout << "1) North ^" << '\n' << "2) West <" << '\n' << "3) South v" << '\n' << "4) East >" << '\n' << "5) Inventory" << '\n' << "6) Mine" << '\n' << '\n' << '\n';
-	cout << "Legend: " << '\n' << "D = Dwarf/Yourelf" << '\n' << "x = Place you can move to" << '\n' << "C = Collasped dirt" << '\n' << "N = Nitra" << '\n' << "G = Gold" << '\n' << "g = Glyphid" << '\n';
+	cout << "1) North ^" << '\n' << "2) West <" << '\n' << "3) South v" << '\n' << "4) East >" << '\n' << "5) Inventory" << '\n' << "6) Mine" << '\n';cout << "8) Help" << '\n' << '\n';
+	cout << "Legend: " << '\n' << "D = Dwarf/Yourelf" << '\n' << "x = Place you can move to" << '\n' << "C = Collasped dirt" << '\n' << "N = Nitra" << '\n' << "G = Gold" << '\n'<<"H = Red Suger" << '\n' << "g = Glyphid" << '\n';
 	goto findfindlocation;
 
 	//---------------------------------------------------------------------------------------------------------------------
@@ -311,34 +312,34 @@ swarm:
 	switch (swarmchance)
 	{
 	case 13: enemycount = 2, g1h = 25, g2h = 25, //enemy count assigned, and health
-						XS1 = 'g', XS2 = 'g', //enemies spawned
+						XS1 = 'G', XS2 = 'G', //enemies spawned
 						g1l = 1, g2l = 2; goto swarmmap;//assign location data
 	case 12: enemycount = 2, g1h = 25, g2h = 25,
-						XS16 = 'g', XS21 = 'g',
+						XS16 = 'G', XS21 = 'G',
 						g1l = 16, g2l = 21; goto swarmmap;
 
 	case 11: enemycount = 3, g1h = 25, g2h = 25, g3h = 25,
-						XS1 = 'g', XS2 = 'g', XS6 ='g',
+						XS1 = 'G', XS2 = 'G', XS6 ='G',
 						g1l = 1, g2l =2; goto swarmmap;
 
 	case 10: enemycount = 3, g1h = 25, g2h = 25,  g3h=25,
-						XS24 = 'g', XS25 = 'g', XS20 = 'g',
+						XS24 = 'G', XS25 = 'G', XS20 = 'G',
 						g1l=24, g2l =25, g3l= 20; goto swarmmap;
 
 	case 9: enemycount = 4, g1h = 25, g2h = 25, g3h =25, g4h =25,
-						XS5 = 'g', XS4 = 'g', XS3='g', XS10 ='g'; goto swarmmap;
+						XS5 = 'G', XS4 = 'G', XS3='G', XS10 ='G'; goto swarmmap;
 
 	case 8: enemycount =4, g1h = 25, g2h = 25, g3h = 25, g4h = 25,
-						XS21 = 'g', XS22 = 'g', XS3 = 'g', XS4 = 'g'; goto swarmmap;
+						XS21 = 'G', XS22 = 'G', XS3 = 'G', XS4 = 'G'; goto swarmmap;
 
 	case 7: enemycount = 5, g1h = 25, g2h = 25, g3h = 25, g4h = 25, g5h = 25,
-		XS21 = 'g', XS22 = 'g', XS3 = 'g', XS4 = 'g', XS1 = 'g'; goto swarmmap;
+		XS21 = 'G', XS22 = 'G', XS3 = 'G', XS4 = 'G', XS1 = 'G'; goto swarmmap;
 
 	case 6: enemycount = 5, g1h = 25, g2h = 25, g3h = 25, g4h = 25, g5h = 25,
-		XS21 = 'g', XS22 = 'g', XS3 = 'g', XS4 = 'g', XS1= 'g'; goto swarmmap;
+		XS21 = 'G', XS22 = 'G', XS3 = 'G', XS4 = 'G', XS1= 'G'; goto swarmmap;
 
 	case 5: enemycount = 6, g1h = 25, g2h = 25, g3h = 25, g4h = 25, g5h = 25, g6h = 25,
-			XS21 = 'g', XS22 = 'g', XS3 = 'g', XS4 = 'g', XS1='g', XS25; goto swarmmap;
+			XS21 = 'G', XS22 = 'G', XS3 = 'G', XS4 = 'G', XS1='G', XS25; goto swarmmap;
 
 	default: cout << "something very wrong has happened (error swarmchance below 5/13)"; goto findfindlocation;//failsafe
 		break;
@@ -1097,77 +1098,77 @@ gmove:
 	{
 	case 901: switch (enemycount)
 				{
-				case 1: XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';//clear map apart from player and put G in new location
+				case 1: XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;	//clear map apart from player and put G in new location
 					break;
-				case 2: XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 2: XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 3: XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 3: XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 4: XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 4: XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 5: XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 5: XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 6: XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 6: XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				}
 	case 902: switch (enemycount)
 				{
-				case 1: XS1 = 'X', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 1: XS1 = 'X', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 2: XS1 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 2: XS1 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 3: XS1 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 3: XS1 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 4: XS1 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 4: XS1 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 5: XS1 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 5: XS1 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 6: XS1 = 'G', XS3 = 'G', XS4 = 'G', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 6: XS1 = 'G', XS3 = 'G', XS4 = 'G', XS5 = 'X', XS6 = 'G', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				}
 	case 903:switch (enemycount)
 				{
-				case 1: XS2 = 'X', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 1: XS2 = 'X', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 2: XS2 = 'G', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 2: XS2 = 'G', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 3: XS2 = 'G', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 3: XS2 = 'G', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 4: XS2 = 'G', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 4: XS2 = 'G', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 5: XS2 = 'G', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'G', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 5: XS2 = 'G', XS4 = 'G', XS1 = 'X', XS5 = 'X', XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'G', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 6: XS2 = 'G', XS4 = 'G', XS1 = 'G', XS5 = 'X', XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'G', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 6: XS2 = 'G', XS4 = 'G', XS1 = 'G', XS5 = 'X', XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'G', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				}
 	case 904: switch (enemycount)
 				{
-				case 1: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 1: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'X', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 5: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'G', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 5: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'G', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 6: XS1 = 'X', XS2 = 'G', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'G', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 6: XS1 = 'X', XS2 = 'G', XS3 = 'G', XS5 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'G', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				}
 	case 905:switch (enemycount)
 				{
-				case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G', XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'G', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'G', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
-				case 6: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'G', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+				case 6: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS4 = 'G', XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'G', XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				}
 	case 906:switch (enemycount)//fix
@@ -1176,37 +1177,37 @@ gmove:
 									XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 2: XS1 = 'G', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X', 
 								   XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 3: XS1 = 'G', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X', 
 									XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 4: XS1 = 'G', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X', 
 									XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 5: XS1 = 'G', XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X', 
 									XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 6: XS1 = 'G', XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', 
 									XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				}
 	case 907: switch (enemycount)
@@ -1215,37 +1216,37 @@ gmove:
 						XS6 = 'X',			  XS8 = 'X', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X', 
 						XS6 = 'G',			  XS8 = 'X', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'G',			  XS8 = 'X', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 4: XS1 = 'X', XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X', 
 						XS6 = 'G',			  XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 5: XS1 = 'X', XS2 = 'G', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'G',			 XS8 = 'G', XS9 = 'X', XS10 = 'X',
 						XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 6: XS1 = 'X', XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X', 
 						XS6 = 'G',				XS8 = 'G', XS9 = 'X', XS10 = 'X', 
 						XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X', 
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X', 
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 				}
 	case 908: switch (enemycount)
 				{
@@ -1253,37 +1254,37 @@ gmove:
 						XS6 = 'X',	XS7 = 'X',			 XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'G', XS7 = 'G',			XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'G',			XS9 = 'G', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'G',			XS9 = 'G', XS10 = 'X',
 						XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 5: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'G',			XS9 = 'G', XS10 = 'X',
 						XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+						XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				case 6: XS1 = 'X', XS2 = 'G', XS3 = 'G', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'G', XS9 = 'G', XS10 = 'X',
 					XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-					XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+					XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 					break;
 				}
 	case 909: switch (enemycount)//unformated, I aint spending the next hour tabbing this so its uniform
@@ -1292,37 +1293,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'G', XS4 = 'G', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS10 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 910: switch (enemycount)
@@ -1331,37 +1332,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'G',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'G',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'G',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'G', XS5 = 'G',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 911: switch (enemycount)
@@ -1370,37 +1371,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'G', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'G', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 912: switch (enemycount)
@@ -1409,37 +1410,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'G', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X',
 		XS11 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'G', XS8 = 'G', XS9 = 'X', XS10 = 'X',
 		XS11 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 913: switch (enemycount)
@@ -1448,37 +1449,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 914: switch (enemycount)
@@ -1487,37 +1488,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'G', XS9 = 'G', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 915: switch (enemycount)
@@ -1526,37 +1527,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'G',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'G', XS10 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 916: switch (enemycount)
@@ -1565,37 +1566,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'G', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'G', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'G', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'G', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'G', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'G', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'G', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'G', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'G', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 917: switch (enemycount)
@@ -1604,37 +1605,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 918: switch (enemycount)
@@ -1643,37 +1644,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS19 = 'X', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'G', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'G', XS19 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 919: switch (enemycount)
@@ -1682,37 +1683,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'X',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'G', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'G', XS20 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'X'; goto gmap;
 		break;
 	}
 	case 920: switch (enemycount)
@@ -1721,37 +1722,37 @@ gmove:
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;
 		break;
 	case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'G';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'G'; goto gmap;
 		break;
 	case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'G';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'X', XS25 = 'G'; goto gmap;
 		break;
 	case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'G';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'G'; goto gmap;
 		break;
 	case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 		XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'G',
 		XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
 		XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G',
-		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'G';
+		XS21 = 'X', XS22 = 'X', XS23 = 'X', XS24 = 'G', XS25 = 'G'; goto gmap;
 		break;
 	}
 
@@ -1761,38 +1762,38 @@ gmove:
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X'; // pos 21 1g
+						XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 21 1g
 					break;
 
 				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'G', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X'; // pos 21 2g
+						XS22 = 'G', XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 21 2g
 					break;
 				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'G', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 21 3g
+						XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 21 3g
 					break;
 				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'G', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 21 4g
+						XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 21 4g
 					break;
 				case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'G', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 21 5g
+						XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 21 5g
 					break;
 				case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'G', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 21 6g
+						XS22 = 'G', XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 21 6g
 					break;
 				}
 
@@ -1802,37 +1803,37 @@ gmove:
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'G',				XS23 = 'X', XS24 = 'X', XS25 = 'X'; // pos 22 1g
+						XS21 = 'G',				XS23 = 'X', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 22 1g
 					break;
 				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 22 2g
+						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 22 2g
 					break;
 				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 22 3g
+						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	 // pos 22 3g
 					break;
 				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'G', XS17 = 'G', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 22 4g
+						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	// pos 22 4g
 					break;
 				case 5:	XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'G', XS17 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 22 5g
+						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	 // pos 22 5g
 					break;
 				case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'G', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'G', XS17 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; // pos 22 6g
+						XS21 = 'G',				XS23 = 'G', XS24 = 'X', XS25 = 'X'; goto gmap;	 // pos 22 6g
 					break;
 				}
 	case 923: switch (enemycount)
@@ -1841,37 +1842,37 @@ gmove:
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'X',				XS24 = 'G', XS25 = 'X'; // pos 23 1g
+						XS21 = 'X', XS22 = 'X',				XS24 = 'G', XS25 = 'X'; goto gmap;	// pos 23 1g
 					break;
 				case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'G',				XS24 = 'G', XS25 = 'X'; // pos 23 2g
+						XS21 = 'X', XS22 = 'G',				XS24 = 'G', XS25 = 'X'; goto gmap;	 // pos 23 2g
 					break;
 				case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'G',				XS24 = 'G', XS25 = 'X'; // pos 23 3g
+						XS21 = 'X', XS22 = 'G',				XS24 = 'G', XS25 = 'X'; goto gmap;	// pos 23 3g
 					break;
 				case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'G', XS18 = 'G', XS19 = 'X', XS20 = 'X',
-						XS21 = 'X', XS22 = 'G',				XS24 = 'G', XS25 = 'X'; // pos 23 4g
+						XS21 = 'X', XS22 = 'G',				XS24 = 'G', XS25 = 'X'; goto gmap;	 // pos 23 4g
 					break;
 				case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'G', XS18 = 'G', XS19 = 'G', XS20 = 'X',
-						XS21 = 'X', XS22 = 'G',				XS24 = 'G', XS25 = 'X'; // pos 23 5g
+						XS21 = 'X', XS22 = 'G',				XS24 = 'G', XS25 = 'X'; goto gmap;	 // pos 23 5g
 					break;
 				case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 						XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 						XS11 = 'X', XS12 = 'X', XS13 = 'G', XS14 = 'X', XS15 = 'X',
 						XS16 = 'X', XS17 = 'G', XS18 = 'G', XS19 = 'G', XS20 = 'X',
-						XS21 = 'X', XS22 = 'G',				 XS24 = 'G', XS25 = 'X'; // pos 23 6g
+						XS21 = 'X', XS22 = 'G',				 XS24 = 'G', XS25 = 'X'; goto gmap;	 // pos 23 6g
 					break;
 				}
 	case 224: switch (enemycount)
@@ -1880,79 +1881,80 @@ gmove:
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-					XS21 = 'X', XS22 = 'X', XS23 = 'X',				XS25 = 'G'; // pos 24 1g
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',				XS25 = 'G'; goto gmap;	 // pos 24 1g
 				break;
 			case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 2g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; goto gmap;	 // pos 24 2g
 				break;
 			case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'X',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 3g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; goto gmap;	// pos 24 3g
 				break;
 			case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 4g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; goto gmap;	 // pos 24 4g
 				break;
 			case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 5g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; goto gmap;	// pos 24 5g
 				break;
 			case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'G', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; // pos 24 6g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G',				XS25 = 'G'; goto gmap;	// pos 24 6g
 				break;
 				}
 	case 225: switch (enemycount)
 			{
-			case 1: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+			case 1: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'X',
-					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';				// pos 25 1g
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';		goto gmap;			// pos 25 1g
 				break;
-			case 2: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+			case 2: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'X', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';				//pos 25 2g
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';		goto gmap;			//pos 25 2g
 				break;
-			case 3: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+			case 3: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'X',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';				//pos 25 3g 
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';		goto gmap;			//pos 25 3g 
 				break;
-			case 4: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+			case 4: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';				//pos 25 4g
+					XS21 = 'X', XS22 = 'X', XS23 = 'X',	XS24 = 'G';		goto gmap;			//pos 25 4g
 				break;
-			case 5: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+			case 5: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'X', XS15 = 'G',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G';				//pos 25 5g
+					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G';		goto gmap;			//pos 25 5g
 				break;
-			case 6: XS1 = ‘X’, XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
+			case 6: XS1 = 'X', XS2 = 'X', XS3 = 'X', XS4 = 'X', XS5 = 'X',
 					XS6 = 'X', XS7 = 'X', XS8 = 'X', XS9 = 'X', XS10 = 'X',
 					XS11 = 'X', XS12 = 'X', XS13 = 'X', XS14 = 'G', XS15 = 'G',
 					XS16 = 'X', XS17 = 'X', XS18 = 'X', XS19 = 'G', XS20 = 'G',
-					XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G';				//pos 25 6g
+				XS21 = 'X', XS22 = 'X', XS23 = 'G', XS24 = 'G';	goto gmap;			//pos 25 6g
 				break;
 			}
 	}
+	gmap:
 	//display map after G move
 	cout << "#####################################" << '\n';
 	cout << "# A       B       C       D       E #" << '\n';
@@ -2019,195 +2021,349 @@ findlocation2:
 	switch (location)
 	{
 	case 201:	switch (input)
-			{
-			case 1: X201 = 'X'; X202 = 'D'; goto findmap;//north
-			case 3: X201 = 'X'; X7 = 'D'; goingmap = 1; goto findmap; //south back to map1
-			case 5: goto inventory;//inv
-			case 8: goto help;//controls
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
-				break;
-			}
+		{
+		case 1: X201 = 'X'; X202 = 'D'; goto findmap;//north
+		case 3: X201 = 'X'; X7 = 'D'; goingmap = 1; goto findmap; //south back to map1
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+			break;
+		}
 	case 202:	switch (input)
-			{
-			case 1: X202 = 'X'; //north
-					X203 = 'D'; 
-					goto findmap;
-			case 3: X202 = 'X';//south
-					X201 = 'D';
-					goto findmap;
-			case 4: X202 = 'X';//West
-					X204 = 'D';
-					goto findmap;
-			case 5: goto inventory;//inv
-			case 8: goto help;//controls
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
-				break;
-			}
-	case 203:	switch (input)
-			{
-			case 1:if (C2 == ' ')//north through dirt
-					{
-					X203 = 'X'; 
-					X210 = 'D';
-					goto findmap;
-					}
-					 else
-						{
-						cout << "There is collapsed dirt here. Maybe you could mine it. \n"; goto findlocation2;
-						}
-			case 4: X203 = 'X';//West
-					X204 = 'D';
-					goto findmap;
-			case 5: goto inventory;//inv
-			case 6: C2 = ' ';//mine
-					goto findmap;
-			case 8: goto help;//controls
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
-				break;
-			}
+		{
+		case 1: X202 = 'X'; //north
+			X203 = 'D';
+			goto findmap;
+		case 3: X202 = 'X';//south
+			X201 = 'D';
+			goto findmap;
+		case 4: X202 = 'X';//West
+			X204 = 'D';
+			goto findmap;
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+			break;
+		}
+		case 203:	switch (input)
+		{
+		case 1:if (C2 == ' ')//north through dirt
+		{
+			X203 = 'X';
+			X210 = 'D';
+			goto findmap;
+		}
+			  else
+		{
+			cout << "There is collapsed dirt here. Maybe you could mine it. \n"; goto findlocation2;
+		}
+		case 4: X203 = 'X';//West
+			X204 = 'D';
+			goto findmap;
+		case 5: goto inventory;//inv
+		case 6: C2 = ' ';//mine
+			goto findmap;
+		case 8: goto help;//controls
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+			break;
+		}
 	case 204:	switch (input)
-			{
-			case 2: X204 = 'X';//east
-					X202 = 'D';
-					goto findmap;
-						break;
-			case 4: X204 = 'X'; //west
-					X205 = 'D'; 
-					goto findmap;
-						break;
-			case 5: goto inventory;//inv
-			case 8: goto help;//controls
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
+		{
+		case 2: X204 = 'X';//east
+			X202 = 'D';
+			goto findmap;
+			break;
+		case 4: X204 = 'X'; //west
+			X205 = 'D';
+			goto findmap;
+			break;
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
 
-			}
+		}
 	case 205:	switch (input)
-				{
-				case 1: X205 = 'X';//north
-						X206 = 'D';
-						goto findmap;
-				case 2: X205 = 'X';//east
-						X204 = 'D';
-						goto findmap;
-				case 5: goto inventory;//inv
-				case 8: goto help;//controls
-				default: cout << "You can't do that here." << '\n'; goto findlocation2;
-				}
+		{
+		case 1: X205 = 'X';//north
+			X206 = 'D';
+		goto findmap;
+		case 2: X205 = 'X';//east
+		X204 = 'D';
+		goto findmap;
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+		}
 	case 206:	switch (input)
-			{
-			case 1: X206 = 'X';//north
-					X207 = 'D';
-					goto findmap;
-			case 3: X206 = 'X';//south
-					X205 = 'D';
-					goto findmap;
-			case 5: goto inventory;//inv
-			case 8: goto help;//controls
-			case 6:if (N2 == 'N')//mine
-			{
-				N2 = '/'; 
-				N3 = ' ';
-				oreamount = 3;
-				goto nitra1;
-			}
-				  else
-				{
-				cout << "You can't do that here." << '\n'; goto findlocation2;
-				}
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
-			}
+		{
+		case 1: X206 = 'X';//north
+				X207 = 'D';
+				goto findmap;
+		case 3: X206 = 'X';//south
+				X205 = 'D';
+				goto findmap;
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		case 6:if (N2 == 'N')//mine
+		{
+			N2 = '/';
+			N3 = ' ';
+			oreamount = 3;
+			goto nitra1;
+		}
+			  else
+		{
+			cout << "You can't do that here." << '\n'; goto findlocation2;
+		}
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+		}
 	case 207:switch (input)
-			{
-			case 2: X207 = 'X';//east
-					X208 = 'D';
-					goto findmap;
-			case 3: X207 = 'X';//south
-					X206 = 'D';
-					goto findmap;
-			case 5: goto inventory;//inv
-			case 8: goto help;//controls
-			case 6:if (N4 == 'N')//mine
-			{
-				N4 = '/';
-				N5 = ' '; 
-				oreamount = 3;
-				goto nitra1;
-			}
+		{
+		case 2: X207 = 'X';//east
+				X208 = 'D';
+				goto findmap;
+		case 3: X207 = 'X';//south
+				X206 = 'D';
+				goto findmap;
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		case 6:if (N4 == 'N')//mine
+		{
+		N4 = '/';
+		N5 = ' ';
+		oreamount = 3;
+		goto nitra1;
+		}
 			  else
 				{
 				cout << "You can't do that here." << '\n'; goto findlocation2;
 				}
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
-	}
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+		}
 	case 208: switch (input)
-			{
-			case 1: X208 = 'X';//north
-					X209 = 'D';
-					goto findmap;
-			case 4: X208 = 'X';//West
+		{
+		case 1: X208 = 'X';//north
+				X209 = 'D';
+				goto findmap;
+		case 4: X208 = 'X';//West
 				X207 = 'D';
 				goto findmap;
-			case 5: goto inventory;//inv
-			case 8: goto help;//controls
-			case 6:if (G2 == 'G')//mine
-			{
-				G2 = '/';
-				oreamount = 2;
-				goto gold1;
-			}
-				  else
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		case 6:if (G2 == 'G')//mine
+		{
+			G2 = '/';
+			oreamount = 2;
+			goto gold1;
+		}
+			  else
 				{
 				cout << "You can't do that here." << '\n'; goto findlocation2;
 				}
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
-			}
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+		}
 	case 209: switch (input)
-			{
-			case 3: X209 = 'X';//south
-					X208 = 'D';
-			goto findmap;
-			case 2: X209 = 'X';//east
-					X210 = 'D';
-					goto findmap;
-			case 5: goto inventory;//inv
-			case 8: goto help;//controls
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
-			}
-	case 210:	switch (input)
-			{
-			case 1: X210 = 'X';//north
-					X211 = 'D';
-					goto findmap;
-			case 2: X210 = 'X';//west
-					X211 = 'D';
-					goto findmap;
-			case 3:if (C2 == ' ')//south through dirt
-					{
-					X210 = 'X';
-					X203 = 'D';
-					goto findmap;
-					}
-					  else
-					{
-					cout << "There is collapsed dirt here. Maybe you could mine it. \n"; goto findlocation2;
-					}
-			case 4: X210 = 'X'; //west
-					X209 = 'D';
-					goto findmap;
-						break;
-			case 6: C2 = ' ';
+		{
+		case 3: X209 = 'X';//south
+				X208 = 'D';
 				goto findmap;
-			case 5: goto inventory;//inv
-			case 8: goto help;//controls
-			default: cout << "You can't do that here." << '\n'; goto findlocation2;
-
-			}
-	case 211:switch (input)
+		case 2: X209 = 'X';//east
+				X210 = 'D';
+				goto findmap;
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+		}
+	case 210:	switch (input)
+		{
+		case 1: X210 = 'X';//north
+				X211 = 'D';
+				goto findmap;
+		case 2: X210 = 'X';//west
+				X211 = 'D';
+				goto findmap;
+		case 3:if (C2 == ' ')//south through dirt
 			{
+			X210 = 'X';
+			X203 = 'D';
+			goto findmap;
+			}
+			  else
+				{
+				cout << "There is collapsed dirt here. Maybe you could mine it. \n"; goto findlocation2;
+				}
+		case 4: X210 = 'X'; //west
+				X209 = 'D';
+				goto findmap;
+				break;
+		case 6: C2 = ' ';
+				goto findmap;
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+
+		}
+	case 211:switch (input)
+		{
+		case 2:{
 			goingmap = 3;
-			case 2:{ X211 = 'X';//east to next/last map
-					X301 = 'D';
-					}
+			 X211 = 'X';//east to next/last map
+			X301 = 'D';
+			goto map3trans;
+			}
+		case 3: X211 = 'X'; X210 = 'D'; goto findmap;
+		case 4: X211 = 'X'; X210 = 'D'; goto findmap;
+		case 5: goto inventory;//inv
+		case 8: goto help;//controls
+		default: cout << "You can't do that here." << '\n'; goto findlocation2;
+		}
 	}
+	//---------------------------------------------------------------------------------------------------------------------
+		//map 3
+		findlocation3:
+			cout << "You've hit the end of the cave call the drop pod when ready, but careful its sure to attract the bugs." << '\n' << "-Mision Control" << '\n' << "Input 7 to call drop pod." << '\n';
+
+			cout << "========================================================================================" << '\n' << '\n' << "What would you like to do? ";
+			cin >> input;
+			if (X301 == 'D') { location = 301; }
+			if (X302 == 'D') { location = 302; }
+			if (X303 == 'D') { location = 303; }
+			if (X304 == 'D') { location = 304; }
+			if (X305 == 'D') { location = 305; }
+			if (X306 == 'D') { location = 306; }
+			if (X307 == 'D') { location = 307; }
+			if (X308 == 'D') { location = 308; }
+			if (X309 == 'D') { location = 309; }
+			if (X310 == 'D') { location = 310; }
+			if (X311 == 'D') { location = 311; }
+
+		switch (location)
+		{
+			case 301: switch (input)
+				{
+				case 1: X301 = 'X'; X302 = 'D'; goto findmap;//north
+				case 2: X301 = 'X'; X302 = 'D'; goto findmap;//east
+				case 4: goingmap = 2; X301 = 'X'; X211 = 'D'; goto findmap;
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 302: switch (input)
+				{
+				case 1: X302 = 'X'; X306 = 'D'; goto findmap;//north
+				case 2: X302 = 'X'; X303 = 'D'; goto findmap;//east
+				case 3: X302 = 'X'; X301 = 'D'; goto findmap;//south
+				case 4: X302 = 'X'; X301 = 'D'; goto findmap;//west
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 303: switch (input)
+				{
+				case 1: X303 = 'X'; X307 = 'D'; goto findmap;//north
+				case 2: X303 = 'X'; X304 = 'D'; goto findmap;//east
+				case 4: X303 = 'X'; X302 = 'D'; goto findmap;//west
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+					}
+				case 304: switch (input)
+				{
+				case 1: X304 = 'X'; X308 = 'D'; goto findmap;
+				case 4: X304 = 'X'; X303 = 'D'; goto findmap;
+				case 5: goto inventory;//inv
+				case 6: if (H1 = 'H')
+					{
+					H1 = '/'; health = health + 35; cout << "You gained 35 health." << '\n' << "You have " << health << " HP" << '\n' << '\n' << "========================================================================================" << '\n' << '\n';
+					}
+						 else cout << "You can't do that here." << '\n'; goto findlocation3;
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 305: switch (input)
+				{
+				case 2: X305 = 'X'; X306 = 'D'; goto findmap;
+				case 5: goto inventory;//inv
+				case 6: if (G3 == 'G')//mine
+				{
+					G3 = '|';
+					oreamount = 2;
+					goto gold1;
+				}
+					  else
+				{
+					cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 306: switch (input)
+				{
+				case 1: X306 = 'X'; X309 = 'D'; goto findmap;
+				case 2: X306 = 'X'; X307 = 'D'; goto findmap;
+				case 3: X306 = 'X'; X302 = 'D'; goto findmap;
+				case 4: X306 = 'X'; X305 = 'D'; goto findmap;
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 307: switch (input)
+				{
+				case 1: X307 = 'X'; X310 = 'D'; goto findmap;
+				case 2: X307 = 'X'; X308 = 'D'; goto findmap;
+				case 3: X307 = 'X'; X303 = 'D'; goto findmap;
+				case 4: X307 = 'X'; X306 = 'D'; goto findmap;
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 308: switch (input)
+				{
+				case 1: X308 = 'X'; X311 = 'D'; goto findmap;
+				case 3: X308 = 'X'; X304 = 'D'; goto findmap;
+				case 4: X308 = 'X'; X307 = 'D'; goto findmap;
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 309: switch (input)
+				{
+				case 2: X309 = 'X'; X310 = 'X'; goto findmap;
+				case 3: X309 = 'X'; X306 = 'X'; goto findmap;
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 210: switch (input)
+				{
+				case 2: X310 = 'X'; X311 = 'X'; goto findmap;
+				case 3: X310 = 'X'; X307 = 'X'; goto findmap;
+				case 4: X310 = 'X'; X309 = 'X'; goto findmap;
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+			case 211: switch (input)
+				{
+				case 3: X311 = 'X'; X308; goto findmap;
+				case 4: X311 = 'X'; X310; goto findmap;
+				case 5: goto inventory;//inv
+				case 7: cout << "Drop pod inbound" << '\n'; XS13 = 'D'; goto spawn;
+				case 8: goto help;//controls
+				default: cout << "You can't do that here." << '\n'; goto findlocation3;
+				}
+
+		}
 	//---------------------------------------------------------------------------------------------------------------------
 	//blank map
 		//cout << "#####################################" << '\n';
@@ -2338,30 +2494,30 @@ map2trans:
 map3trans:
 	cout << "#####################################" << '\n';
 	cout << "#                       __          #" << '\n';
-	cout << "#             ___      / \\____     #" << '\n';
-	cout << "#            /  \\____/       \\    #" << '\n';
+	cout << "#             ___      /  \\____     #" << '\n';
+	cout << "#            /   \\____/        \\    #" << '\n';
 	cout << "#           /                  |    #" << '\n';
-	cout << "#       ___/                   \\   #" << '\n';
-	cout << "#      /   " << X309 << "       " << X310 << "       " << X311 << "    \\  #" << '\n';
+	cout << "#       ___/                    \\   #" << '\n';
+	cout << "#      /   " << X309 << "       " << X310 << "       " << X311 << "     \\  #" << '\n';
 	cout << "#     /                          |  #" << '\n';
-	cout << "#    |                           \\ #" << '\n';
+	cout << "#    |                            \\ #" << '\n';
 	cout << "#    /                            | #" << '\n';
 	cout << "#   " << G3 << "                             | #" << '\n';
-	cout << "#   " << G3 << X305 << "     " << X306 << "       " << X307 << "       " << X308 << " | #" << '\n';
-	cout << "#  \\                            /  #" << '\n';
-	cout << "#   \\                           |  #" << '\n';
+	cout << "#   " << G3 << X305 << "     " << X306 << "       " << X307 << "       " << X308 << "      | #" << '\n';
+	cout << "#   \\                            /  #" << '\n';
+	cout << "#    \\                           |  #" << '\n';
 	cout << "#     |                          |  #" << '\n';
-	cout << "# ____|    " << X302 << "       " << X303 << "       " << X304 << " ___ / #" << '\n';
-	cout << "#/                     _____" << H1 << "       #" << '\n';
-	cout << "#   " << X301 << "   	    ___      /             #" << '\n';
-	cout << "#    _______/  \\____/              #" << '\n';
+	cout << "# ____|    " << X302 << "       " << X303 << "       " << X304 << " ____/  #" << '\n';
+	cout << "#/                    ______" << H1 << "       #" << '\n';
+	cout << "#   " << X301 << "        __      /             #" << '\n';
+	cout << "#    _______/  \\____/               #" << '\n';
 	cout << "#___/                               #" << '\n';
 	cout << "#####################################" << '\n';
 	goto swarm;
 	//---------------------------------------------------------------------------------------------------------------------
 findmap:
 
-	switch (goingmap) 
+	switch (goingmap)
 	{
 	case 1:
 	{
@@ -2387,7 +2543,6 @@ findmap:
 		cout << "#       \\_______________/           #" << '\n';
 		cout << "#####################################" << '\n' << '\n';
 		goto findfindlocation;
-	}
 	case 2:
 	{
 		cout << "#####################################" << '\n';
@@ -2412,31 +2567,31 @@ findmap:
 		cout << "#                           \\      \\#" << '\n';
 		cout << "#####################################" << '\n' << '\n';
 		goto findfindlocation;
-		}
+	}
 	case 3: {
 		cout << "#####################################" << '\n';
 		cout << "#                       __          #" << '\n';
-		cout << "#             ___      / \\____     #" << '\n';
-		cout << "#            /  \\____/       \\    #" << '\n';
+		cout << "#             ___      /  \\____     #" << '\n';
+		cout << "#            /   \\____/        \\    #" << '\n';
 		cout << "#           /                  |    #" << '\n';
-		cout << "#       ___/                   \\   #" << '\n';
-		cout << "#      /   "<<X309<<"       "<<X310<<"       "<<X311<<"    \\  #" << '\n';
+		cout << "#       ___/                    \\   #" << '\n';
+		cout << "#      /   " << X309 << "       " << X310 << "       " << X311 << "     \\  #" << '\n';
 		cout << "#     /                          |  #" << '\n';
-		cout << "#    |                           \\ #" << '\n';
+		cout << "#    |                            \\ #" << '\n';
 		cout << "#    /                            | #" << '\n';
-		cout << "#   "<<G3<<"                             | #" << '\n';
-		cout << "#   "<<G3<<X305<<"     "<<X306<<"       "<<X307<<"       "<<X308<<" | #" << '\n';
-		cout << "#  \\                            /  #" << '\n';
-		cout << "#   \\                           |  #" << '\n';
+		cout << "#   " << G3 << "                             | #" << '\n';
+		cout << "#   " << G3 << X305 << "     " << X306 << "       " << X307 << "       " << X308 << "      | #" << '\n';
+		cout << "#   \\                            /  #" << '\n';
+		cout << "#    \\                           |  #" << '\n';
 		cout << "#     |                          |  #" << '\n';
-		cout << "# ____|    "<<X302<<"       "<<X303<<"       "<<X304<<" ___ / #" << '\n';
-		cout << "#/                     _____"<<H1<<"       #" << '\n';
-		cout << "#   "<<X301<<"   	    ___      /             #" << '\n';
-		cout << "#    _______/  \\____/              #" << '\n';
+		cout << "# ____|    " << X302 << "       " << X303 << "       " << X304 << " ____/  #" << '\n';
+		cout << "#/                    ______" << H1 << "       #" << '\n';
+		cout << "#   " << X301 << "        __      /             #" << '\n';
+		cout << "#    _______/  \\____/               #" << '\n';
 		cout << "#___/                               #" << '\n';
 		cout << "#####################################" << '\n';
 		goto findfindlocation;
-		}
+	}
 	}
 swarmmap2:
 	cout << "#####################################" << '\n';//this map wa orriganly 81 varriables/locations
@@ -2461,9 +2616,9 @@ swarmmap2:
 	cout << "#                                   #" << '\n';
 	cout << "#####################################" << '\n' << '\n';
 	goto attack;
-
+	}
 death:
-	cout << "========================================================================================" << '\n' << '\n'
+	cout << "========================================================================================" << '\n' << '\n';
 
 
 	cout << "___  ____         _              ______    _ _          _ "<<'\n';
@@ -2474,7 +2629,7 @@ death:
 	cout << "\\_|  |_/_|___/___/_|\\___/|_| |_| \\_| \\__,_|_|_|\\___|\\__,_|" << '\n' << '\n';
 
 
-	cout << "========================================================================================" << '\n' << '\n'
+	cout << "========================================================================================" << '\n' << '\n';
 
 endprogram:
 	cin.get();  //keep console window open
