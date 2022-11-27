@@ -4,3 +4,4 @@ https://github.com/Ash-49/Deep-Rock-CMD
 
 Known bugs: 
 Typing letter instead of number leads to repeated messages, this will softlock your game and force you to close and reopen
+Player disapeers during combat and bugs move to wrong location
