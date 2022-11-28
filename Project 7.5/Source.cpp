@@ -10,7 +10,6 @@
 
 //Notes/to be done, nov 26:
 //end sequance/after final fight display drop pod, show victory screen 
-//bug: player not showing up during combat and enemies seemingly moving to wrong location
 
 #include <iostream>
 #include <cstdlib>
